@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerControllerX : MonoBehaviour
 {
     public bool gameOver;
-    public bool isLowEnough;
     private float floatForce = 7f;
     private float gravityModifier = 1.5f;
     private Rigidbody playerRb;
