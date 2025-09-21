@@ -37,7 +37,7 @@ public class PlayerControllerX : MonoBehaviour
         // While space is pressed and player is low enough, float up
         if (Input.GetKeyDown(KeyCode.Space) && !gameOver)
         {
-            if (transform.position.y < 15f)
+            if (transform.position.y < 13f)
             {
                 playerRb.AddForce(Vector3.up * floatForce, ForceMode.Impulse);
             }
@@ -68,6 +68,7 @@ public class PlayerControllerX : MonoBehaviour
         if (other.gameObject.CompareTag("Ground") && !gameOver)
         {
             playerRb.AddForce(Vector3.up * floatForce, ForceMode.Impulse);
+            playerAudio.PlayOneShot(bounceSound, 1.0f);
         }
 
     }
